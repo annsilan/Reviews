@@ -1,0 +1,55 @@
+.body{
+    background-color: rgba(128, 128, 128, 0.171);
+}
+.container{
+    height: 700px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    margin: 150px auto;
+
+    &__title{
+        font-size: 50px;
+        text-align: center;
+        color: rgb(55, 141, 141);
+        
+    }
+    &__reviews{
+        background-color: white;
+        box-sizing: content-box;
+        border: 1px solid rgb(231, 228, 228);
+        border-radius: 8px;
+        box-shadow: 3px 3px rgb(231, 228, 228);
+
+    }
+    &__fotoBox{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        box-sizing: content-box;
+        justify-content: space-around;
+       
+         
+        &__Hotel{
+            height: 150px;
+            width: 200px;
+            margin: 5px;
+            transition: transform 400ms linear;
+        }
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+.foto{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+    align-items: center;
+    
+}
+
