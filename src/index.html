@@ -6,6 +6,12 @@
         <title>Reviews</title>
         <link rel="stylesheet" type="text/css" href="styles.scss" />
         <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="mobilStyles.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -16,28 +22,179 @@
     <body class="body">
         <div class="container">
             <h1 class="container__title">Our reviews</h1>
-            <div class="container__reviews">
+            <div class="container__reviewsWindow">
                 <div class="container__fotoBox">
-                    <img src="Foto/night.jpg" class="container__fotoBox__Hotel">
-                    <img src="Foto/room.jpg" class="container__fotoBox__Hotel">
-                    <img src="Foto/bath.jpg" class="container__fotoBox__Hotel">
+                    <img
+                        src="Foto/night.jpg"
+                        class="container__fotoBox__Hotel"
+                    />
+                    <img
+                        src="Foto/room.jpg"
+                        class="container__fotoBox__Hotel"
+                    />
+                    <img
+                        src="Foto/bath.jpg"
+                        class="container__fotoBox__Hotel"
+                    />
                 </div>
-                <img src="Foto/men.jpg" class="foto"/>
-                
+                <div class="container__nameHotel">
+                    <p>Villa Océane</p>
+                    <img
+                        src="Foto/star1.png"
+                        class="container__nameHotel__star"
+                    />
+                    <img
+                        src="Foto/star1.png"
+                        class="container__nameHotel__star"
+                    />
+                    <img
+                        src="Foto/star1.png"
+                        class="container__nameHotel__star"
+                    />
+                    <img
+                        src="Foto/star1.png"
+                        class="container__nameHotel__star"
+                    />
+                </div>
+                <div
+                    id="carousel"
+                    class="reviews carousel slide slick carousel-fade"
+                >
+                    <div id="random" class="reviews">
+                        <div id="Maxim" class="carous">
+                            <div class="activ">
+                                <img src="Foto/men.jpg" class="foto" />
+                                <p class="name">Максим</p>
+                                <p class="textReview">
+                                    «Oтель расположен прямо на берегу моря и в
+                                    нескольких минутах ходьбы от некоторых
+                                    ресторанов. Обратите внимание, что море
+                                    бурное и не подходит для купания. Опытные
+                                    серферы могут выйти в море прямо из отеля.
+                                    На туктуке за 20 минут можно добраться до
+                                    Велигамы, где есть большой пляж для купания
+                                    и серфинга для начинающих. Номера отеля со
+                                    вкусом оформлены и очень чистые, со всеми
+                                    удобствами, такими как вода, кофе/чай,
+                                    холодильник, сейф, туалетные принадлежности
+                                    и т.д. Персонал очень дружелюбный и
+                                    услужливый, и у нас также была хорошая еда в
+                                    отеле. Сад не очень большой, но предлагает
+                                    прекрасный вид на море и имеет хороший
+                                    бассейн. Одним словом, хороший отель для
+                                    отдыха.»
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            id="Maria"
+                            class="carous carousel slide slick carousel-fade"
+                        >
+                            <div class="reviews">
+                                <img src="Foto/women.jpg" class="foto" />
+                                <p class="name">Мария</p>
+                                <p class="textReview">
+                                    «Это шикарное пейзажное место с великолепным
+                                    обслуживанием. Завтраки и ужины готовились
+                                    индивидуально, по предварительному получению
+                                    наших пожеланий. Все очень вкусно, красиво и
+                                    сытно. Океан идеален для серфинга, и вы
+                                    всегда можете наблюдать серфингистов лежа из
+                                    бассейна. До пляжа, где можно купаться можно
+                                    дойти пешком. Вероятно не подходит это место
+                                    для маленьких детей. Мы были здесь три ночи,
+                                    и уезжать совершенно не хотели. Очень
+                                    душевное место.»
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            id="John"
+                            class="carous carousel slide slick carousel-fade"
+                        >
+                            <div class="reviews">
+                                <img src="Foto/young-men.jpg" class="foto" />
+                                <p class="name">John</p>
+                                <p class="textReview">
+                                    «Очень доброжелательный и внимательный
+                                    персонал. Узнав, что у нас медовый месяц,
+                                    бесплатно повысили класс проживания. В
+                                    номере нас ждали фрукты и охлаждённое вино,
+                                    а так же ванна с лепестками экзотических
+                                    цветов. Завтрак каждое утро сервировали на
+                                    балконе в номере. Тихое, спокойное место,
+                                    удаленное от городской суеты. Тишину
+                                    нарушает только шум океана. При этом до
+                                    ближайшего пляжа и кафе можно дойти за 10
+                                    минут. Будем рекомендовать это место своим
+                                    друзьям. Спасибо за наш волшебный медовый
+                                    месяц!!! Мы уже скучаем!»
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            id="Lusia"
+                            class="carous carousel slide slick carousel-fade"
+                        >
+                            <div class="reviews">
+                                <img src="Foto/girl1.jpg" class="foto" />
+                                <p class="name">Lusia</p>
+                                <p class="textReview">
+                                    «Расположение было тихим и спокойным, прямо
+                                    на восхитительном перерыве для серфинга,
+                                    персонал был безупречным и невероятно
+                                    любезным ко всем потребностям (с 16-месячным
+                                    ребенком), еда была фантастической, номер
+                                    удобный, бассейн чистый и спокойный. »
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            id="Irina"
+                            class="carous carousel slide slick carousel-fade"
+                        >
+                            <div class="reviews">
+                                <img src="Foto/girl2.jpg" class="foto" />
+                                <p class="name">Ирина</p>
+                                <p class="textReview">
+                                    «Расположение было восхитительным, с
+                                    прекрасным видом на море и местом для
+                                    серфинга прямо перед отелем, что идеально
+                                    подходило моему мужу. Вся еда, которую мы
+                                    ели, была отличной. Персонал был невероятно
+                                    любезным и внимательным, организовал массаж
+                                    на месте, а также взял напрокат доску для
+                                    серфинга для моего мужа и всегда проверял,
+                                    есть ли что-нибудь, что нам нужно. Отель
+                                    находится в прекрасном месте, поблизости
+                                    есть несколько хороших кафе, ресторанов и
+                                    мест для сноркелинга. Мы также видели много
+                                    черепах в море прямо перед отелем.»
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-            </div>
-            <div>
-
+                    <div class="buttons">
+                        <button href="#carousel" class="prev button">
+                            <img src="Foto/back.png" class="icon" />
+                        </button>
+                        <button href="#carousel" class="next button">
+                            <img src="Foto/next.png" class="icon" />
+                        </button>
+                    </div>
+                    <button id="next-random" class="button">
+                        Случайный отзыв
+                    </button>
+                </div>
             </div>
         </div>
-        
-
-
-
 
         <script src="script.js"></script>
-
+        <script
+            type="text/javascript"
+            src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        ></script>
+        <script src="#random.js" defer></script>
     </body>
-   
 </html>
-

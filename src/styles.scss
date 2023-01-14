@@ -1,55 +1,135 @@
-.body{
+.body {
     background-color: rgba(128, 128, 128, 0.171);
 }
-.container{
-    height: 700px;
+
+.container {
+    /*height: 700px;*/
     width: 700px;
     display: flex;
     flex-direction: column;
-    box-sizing: content-box;
-    margin: 150px auto;
+    box-sizing: border-box;
+    margin: 50px auto;
 
-    &__title{
+    &__title {
         font-size: 50px;
         text-align: center;
-        color: rgb(55, 141, 141);
-        
+        color: hwb(198 4% 41% / 0.699);
+        font-weight: 700;
     }
-    &__reviews{
+    &__reviewsWindow {
         background-color: white;
         box-sizing: content-box;
         border: 1px solid rgb(231, 228, 228);
         border-radius: 8px;
-        box-shadow: 3px 3px rgb(231, 228, 228);
-
+        box-shadow: 3px 3px 3px hwb(200 54% 39% / 0.288);
+        background: linear-gradient(
+            to right,
+            hwb(198 23% 32% / 0.699) 3%,
+            hsla(0, 0%, 98%, 0.212) 90%
+        );
     }
-    &__fotoBox{
+    &__fotoBox {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
         box-sizing: content-box;
         justify-content: space-around;
-       
-         
-        &__Hotel{
+
+        &__Hotel {
             height: 150px;
             width: 200px;
-            margin: 5px;
+            margin: 15px 5px;
+            border-radius: 5px;
             transition: transform 400ms linear;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(3);
+            }
         }
-        &:hover{
-            transform: scale(1.2);
+    }
+
+    &__nameHotel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 10px;
+        color: hwb(198 3% 91% / 0.699);
+        font-weight: 600;
+        font-size: 25px;
+
+        &__star {
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    .reviews {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+
+        .foto {
+            display: flex;
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            color: hwb(198 3% 91% / 0.699);
+            font-size: 20px;
+            margin: 5px;
+        }
+
+        .textReview {
+            color: hwb(198 3% 91% / 0.699);
+            padding: 5px 80px;
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        .activ {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .icon {
+            height: 25px;
+            width: 25px;
+            transition: transform 400ms linear;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        .button {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 400;
+            color: hwb(198 22% 33% / 0.986);
+            border: none;
+            background-color: hwb(198 69% 11% / 0);
+            cursor: pointer;
+            transition: transform 400ms linear;
+
+            &:hover {
+                transform: scale(1.2);
+            }
         }
     }
 }
-.foto{
-    display: flex;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    object-fit: cover;
-    object-position: center;
-    align-items: center;
-    
+.carous {
+    display: none;
 }
-
+.carous:first-child {
+    display: block;
+}
