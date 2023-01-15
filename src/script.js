@@ -4,6 +4,8 @@ let btn_next = document.querySelector("#carousel .buttons .next")
 let btn_random = document.querySelector("#random   .random ")
 let review = document.querySelectorAll("#carousel .carous")
 
+
+
 let i = 0
 
 if (i >= review.length) {
@@ -30,6 +32,8 @@ btn_prev.onclick = function () {
     }
     review[i].style.display = "block"
 }
+
+
 
 let quotes = [
     [
@@ -68,6 +72,49 @@ document.getElementById("next-random").addEventListener("click", function () {
     Lusia.innerHTML = quote[3]
     Irina.innerHTML = quote[4]
 })
+
+
+let mobilSlid = document.getElementById("mobilSlide")
+let foto = document.querySelectorAll("#mobilSlide .mobilSlid")
+let pmob = document.querySelector("#mobilSlide .prevMob")
+let nmob = document.querySelector("#mobilSlide .nextMob")
+
+let y = 0
+
+
+if (y >= foto.length) {
+    y = 0
+}
+
+nmob.onclick = function () {
+    foto[y].style.display = "none"
+    y++
+    if (y > foto.length) {
+        y = foto.length + 1
+    } else if (y === foto.length) {
+        y = 0
+    }
+
+    foto[y].style.display = "block"
+}
+
+pmob.onclick = function () {
+    foto[y].style.display = "none"
+    y = y - 1
+    if (y < 0) {
+        y = foto.length - 1
+    }
+    foto[y].style.display = "block"
+}
+/*
+
+const slider = ItcSlider.getOrCreateInstance(".mobilSlider")
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".slider").forEach((el) => {
+        ItcSlider.getOrCreateInstance(el)
+    })
+})*/
 
 $(".carous").slick({
     dots: true,

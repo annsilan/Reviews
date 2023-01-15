@@ -12,6 +12,7 @@
             type="text/css"
             href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
         />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -23,6 +24,36 @@
         <div class="container">
             <h1 class="container__title">Our reviews</h1>
             <div class="container__reviewsWindow">
+                <div class="container">
+                    <div id="mobilSlide" class="mobil">
+                    <button href="#mobilSlide" class="prevMob buttonMobil">
+                        <img src="Foto/back.png" class="icon" />
+                    </button>
+                        <div >
+                            <div class="reviews">
+                                <div >
+                                    <div class="mobilSlid activ"  >
+                                        <img src="Foto/night.jpg" class="container__fotoBox__Hotel hotelMob" />
+                                    </div>
+                                    <div class="mobilSlid " >
+                                        <div >
+                                            <img src="Foto/room.jpg" class="container__fotoBox__Hotel hotelMob" />
+                                        </div>
+                                    </div>
+                                    <div class=" mobilSlid " >
+                                        <div  >
+                                            <img src="Foto/bath.jpg" class="container__fotoBox__Hotel hotelMob" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button href="#mobilSlide" class="nextMob buttonMobil">
+                            <img src="Foto/next.png" class="icon" />
+                        </button>
+                    </div>
+                </div>
+
                 <div class="container__fotoBox">
                     <img
                         src="Foto/night.jpg"
@@ -60,8 +91,8 @@
                     id="carousel"
                     class="reviews carousel slide slick carousel-fade"
                 >
-                    <div id="random" class="reviews">
-                        <div id="Maxim" class="carous">
+                    <div id="random" class="reviews carousel slide slick carousel-fade">
+                        <div id="Maxim" class="carous reviews">
                             <div class="activ">
                                 <img src="Foto/men.jpg" class="foto" />
                                 <p class="name">Максим</p>
@@ -191,10 +222,13 @@
         </div>
 
         <script src="script.js"></script>
+    
         <script
             type="text/javascript"
             src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
         ></script>
         <script src="#random.js" defer></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </body>
 </html>

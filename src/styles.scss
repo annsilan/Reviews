@@ -3,18 +3,92 @@
 }
 
 .container {
-    /*height: 700px;*/
-    width: 700px;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
+    box-sizing: content-box;
     margin: 50px auto;
+
+    
+    .mobil {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 auto;
+
+        @media (min-width: 641px) {
+            display: none;
+        }
+
+
+        .buttonMobil {
+            color: hwb(198 22% 33% / 0.986);
+            border: none;
+            background-color: hwb(198 69% 11% / 0);
+            cursor: pointer;
+            transition: transform 400ms linear;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+        .icon {
+            height: 25px;
+            width: 25px;
+            transition: transform 400ms linear;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            
+        }
+        .hotelMob{
+            transition: transform 400ms linear;
+            &:hover {
+                transform: scale(2);
+            }
+
+            @media (max-width: 300px){
+                height: 100px;
+                width: 150px;
+                transition: transform 400ms linear;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+        }
+        .reviews {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+
+            
+        }
+        
+     
+        
+       
+        
+    }
+  
 
     &__title {
         font-size: 50px;
         text-align: center;
         color: hwb(198 4% 41% / 0.699);
         font-weight: 700;
+
+        @media (max-width: 300px){
+            font-size: 40px;
+        }
+
+
     }
     &__reviewsWindow {
         background-color: white;
@@ -34,6 +108,10 @@
         flex-direction: row;
         box-sizing: content-box;
         justify-content: space-around;
+
+        @media (max-width: 640px) {
+            display: none;
+        }
 
         &__Hotel {
             height: 150px;
@@ -58,10 +136,24 @@
         font-weight: 600;
         font-size: 25px;
 
+        @media (max-width: 300px){
+           
+            font-size: 15px;
+            margin: 10 10px;
+          
+        }
+
         &__star {
             height: 30px;
             width: 30px;
         }
+        @media (max-width: 300px){
+            height: 20px;
+            width: 20px;
+           
+        }
+
+
     }
 
     .reviews {
@@ -77,6 +169,11 @@
             width: 100px;
             border-radius: 100%;
             object-fit: cover;
+
+            @media (max-width: 300px){
+                height: 75px;
+                width: 75px;
+            }
         }
 
         .name {
@@ -90,15 +187,13 @@
             padding: 5px 80px;
             font-size: 20px;
             text-align: justify;
-        }
 
-        .activ {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0 auto;
+            @media (max-width: 300px){
+                font-size: 15px;
+                padding: 5px 50px;
+               
+            }
         }
-
         .icon {
             height: 25px;
             width: 25px;
@@ -107,6 +202,17 @@
 
             &:hover {
                 transform: scale(1.2);
+            }
+
+            @media (max-width: 300px){
+                height: 15px;
+                width: 15px;
+                transition: transform 400ms linear;
+                cursor: pointer;
+    
+                &:hover {
+                    transform: scale(1);
+                } 
             }
         }
 
@@ -125,11 +231,26 @@
                 transform: scale(1.2);
             }
         }
+        .activ{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+        }
     }
 }
+
+
 .carous {
     display: none;
 }
 .carous:first-child {
+    display: block;
+}
+ 
+.mobilSlid {
+    display: none;
+}
+.mobilSlid:first-child {
     display: block;
 }
