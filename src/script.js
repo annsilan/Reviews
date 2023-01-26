@@ -3,7 +3,7 @@ let btn_prev = document.querySelector("#carousel .buttons .prev")
 let btn_next = document.querySelector("#carousel .buttons .next")
 let review = document.querySelectorAll("#carousel .carous")
 
-let i = 0
+let i = 0 
 
 
 btn_next.onclick = function () {
